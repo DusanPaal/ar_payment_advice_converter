@@ -1,0 +1,48 @@
+OBI_DE:
+  threshold: 50.0
+  conversion_options: -layout -enc UTF-8 -nopgbrk
+  accounting_map: obi_de
+  excel_name: $docnum$_Avis_$suppnum$_$docdate$
+  date_format: '%d%b%Y'
+  layout:
+    - Branch_Number
+    - Document_Number
+    - Document_Type
+    - Case_ID
+    - On_Account_Text
+    - Gross_Amount_(ABS)
+    - Gross_Amount
+    - Deduction
+    - Net_Amount
+    - Discount
+    - Provision_Discount
+    - Tax_Code
+    - Debitor
+    - GL_Account
+
+MARKANT_DE:
+  threshold: 50.0
+  conversion_options: -table -fixed 4 -enc UTF-8 -nopgbrk
+  accounting_map: markant_de
+  excel_name: $docnum$_Avis_$doctype$_$docdate$
+  date_format: '%d%b%Y'
+  layout:
+    - Document_Number
+    - Document_Date
+    - Document_Type
+    - Archive_Number
+    - Original_Document
+    - Search_Key
+    - Debitor
+    - ILN
+    - Case_ID
+    - On_Account_Text
+    - Gross_Amount
+    - Gross_Amount_(ABS)
+    - Markant_SB_Condition
+    - Customer_SB_Condition
+    - Discount
+    - DL_Condition
+    - Net_Amount
+    - Tax_Rate
+    - Tax_Code

@@ -1,0 +1,15 @@
+excel:
+  data_sheet_name: Data
+  notes_sheet_name: Notes
+
+messages:
+  requests:
+    account: lbs.robot@ledvance.com
+    mailbox: lbs.robot@ledvance.com
+    server: outlook.office365.com
+  notifications:
+    send: true
+    sender: notifications@ledvance.com
+    subject: Notification of payment advice conversion
+    host: intrelay.ledvance.com
+    port: 25
