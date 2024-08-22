@@ -82,7 +82,7 @@ def main(args: dict) -> int:
 		log.exception(exc)
 		log.critical("=== Initialization FAILURE ===")
 		return 2
-
+	
 	try:
 		log.info("=== Fetching user input START ===")
 		user_input = controller.fetch_user_input(
@@ -95,17 +95,17 @@ def main(args: dict) -> int:
 		controller.delete_temp_files(temp_dir)
 		log.info("=== Cleanup END ===\n")
 		return 2
-
+	 
 	if user_input["error_message"] != "":
 		log.info("=== Reporting START ===")
 		controller.send_notification(
 			cfg["messages"], user_input["email"], template_dir,
 			error_msg = user_input["error_message"])
 		log.info("=== Reporting END ===\n")
-		return 0
-
+		return 2
+	  
 	log.info("=== Processing START ===")
-
+	  
 	try:
 		output = controller.convert_documents(
 			rules, user_input["attachment_paths"],
@@ -117,7 +117,7 @@ def main(args: dict) -> int:
 		controller.delete_temp_files(temp_dir)
 		log.info("=== Cleanup END ===\n")
 		return 3
-
+	
 	if output["error_message"] != "":
 		log.info("=== Reporting START ===")
 		controller.send_notification(
@@ -128,9 +128,9 @@ def main(args: dict) -> int:
 		log.info("=== Cleanup START ===")
 		controller.delete_temp_files(temp_dir)
 		log.info("=== Cleanup END ===\n")
-		return 0
+		return 3
 
-	log.info("=== Processing END ===\n")
+	log.info("=== Processing END ===\n") 
 
 	try:
 		log.info("=== Reporting START ===")
