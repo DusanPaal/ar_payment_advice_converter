@@ -4,12 +4,12 @@ excel:
 
 messages:
   requests:
-    account: lbs.robot@ledvance.com
-    mailbox: lbs.robot@ledvance.com
-    server: outlook.office365.com
+    account: # name of the account
+    mailbox: # name of the mailbox
+    server:  # name of the host server
   notifications:
     send: true
-    sender: notifications@ledvance.com
-    subject: Notification of payment advice conversion
-    host: intrelay.ledvance.com
-    port: 25
+    sender: # mail address of the sender
+    subject: # notification subject
+    host: # host server of the sender account
+    port: # port nmber of the host server
