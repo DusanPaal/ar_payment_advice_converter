@@ -1,4 +1,4 @@
-OBI_DE:
+CUSTOMER_AT:
   threshold: 50.0
   conversion_options: -layout -enc UTF-8 -nopgbrk
   accounting_map: obi_de
@@ -20,7 +20,7 @@ OBI_DE:
     - Debitor
     - GL_Account
 
-MARKANT_DE:
+CUSTOMER_DE:
   threshold: 50.0
   conversion_options: -table -fixed 4 -enc UTF-8 -nopgbrk
   accounting_map: markant_de
